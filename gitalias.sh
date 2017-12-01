@@ -10,3 +10,4 @@ git config --global alias.mg merge
 git config --global alias.cf config
 git config --global alias.ad add
 git config --global aliac.cl clone
+git config --global credential.helper cache
