@@ -17,4 +17,6 @@ chmod +x ./gitalias.sh
 ./gitalias.sh
 echo "Start source."
 source ~/.bashrc
+echo "Start ulimit."
+ulimit -c unlimited
 echo "Done."
