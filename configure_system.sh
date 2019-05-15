@@ -10,7 +10,7 @@ echo "parse_git_branch() {
 }
 
 alias l='ls -lahX'
-
+export HISTTIMEFORMAT=\"Run at %d/%m/%y %T \"
 export PS1=\"\\[\\e[1;32m\\]\\u\[\\e[1;00m\\]@\\[\\e[1;34m\\]\\h \\W \[\e[1;33m\][ \@] \\[\\e[1;31m\\]\\\$(parse_git_branch)\\[\\e[1;34m\\]$ \\[\\e[1;00m\\]\"" >> ~/.bashrc
 echo "Start gitaliases"
 chmod +x ./gitalias.sh
