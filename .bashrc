@@ -138,7 +138,7 @@ parse_git_branch() {
 }
 
 alias l='ls -lahX'
-export HISTTIMEFORMAT="Run at %d/%m/%y %T "
+export HISTTIMEFORMAT="%d/%m/%y %T "
 sinfo() {
   echo -e "======================Welcome======================="
   figlet $(whoami)
