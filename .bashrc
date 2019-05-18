@@ -8,6 +8,13 @@ case $- in
       *) return;;
 esac
 
+RED="\033[1;31m"
+GRE="\033[1;32m"
+YEL="\033[1;33m"
+BLU="\033[1;34m"
+LBL="\033[1;36m"
+DEF="\033[1;00m"
+
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
@@ -59,9 +66,9 @@ fi
 
 if [ "$color_prompt" = yes ]; then
   if [ "$UID" == 0 ] ; then
-    PS1="\[\033[1;00m\]${debian_chroot:+($debian_chroot)}\[\033[1;31m\]\u\[\033[1;00m\]@\[\033[1;34m\]\h\[\033[1;33m\]:\[\033[1;36m\]\W \[\033[1;33m\][\@] \[\033[1;31m\]\$(parse_git_branch)\[\033[1;31m\]#\[\033[1;00m\] "
+    PS1="\[${DEF}\]${debian_chroot:+($debian_chroot)}\[${RED}\]\u\[${DEF}\]@\[${BLU}\]\h\[${YEL}\]:\[${LBL}\]\W \[${YEL}\][\@] \[${RED}\]\$(parse_git_branch)\[${RED}\]#\[${DEF}\] "
   else
-    PS1="\[\033[1;00m\]${debian_chroot:+($debian_chroot)}\[\033[1;32m\]\u\[\033[1;00m\]@\[\033[1;34m\]\h\[\033[1;33m\]:\[\033[1;36m\]\W \[\033[1;33m\][\@] \[\033[1;31m\]\$(parse_git_branch)\[\033[1;32m\]$\[\033[1;00m\] "
+    PS1="\[${DEF}\]${debian_chroot:+($debian_chroot)}\[${GRE}\]\u\[${DEF}\]@\[${BLU}\]\h\[${YEL}\]:\[${LBL}\]\W \[${YEL}\][\@] \[${RED}\]\$(parse_git_branch)\[${GRE}\]$\[${DEF}\] "
   fi
 #    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
