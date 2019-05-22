@@ -154,7 +154,7 @@ sinfo() {
   else
     printf "${YEL}\r"
   fi
-  figlet $(whoami)
+  figlet $(whoami) || printf "${RED}Can't print figlet\n"
   printf "${DEF}\r"
   printf "Server Time: $(date)\n"
   printf "=====================Disk Space=====================\n"
