@@ -20,7 +20,7 @@ DEF="\033[1;00m"
   df -h | sed -n '/^\/dev/p'
   printf "======================Free RAM======================\n"
   free -m
-  printf "System UpTime & Active Users:\n$(uptime)\n"
+  printf "System UpTime & Active Users:\n$(w)\n"
   printf "Hostname: $(hostname -f)\n"
   printf "Current Directory: $(pwd)\n"
   if [ "$UID" == 0 ] ; then
