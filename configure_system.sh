@@ -14,5 +14,5 @@ then
 fi
 sudo cp ./.bashrc.tmp $1/.bashrc
 chmod +x ./sinfo
-sudo cp ./sinfo /usr/bin/sinfo
+sudo cp ./sinfo /usr/bin/sysinfo
 echo "Done."
