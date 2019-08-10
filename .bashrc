@@ -45,7 +45,7 @@ fi
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
     xterm-color|*-256color) color_prompt=yes;;
-    xterm) color_prompt=yes;;
+    xterm) color_prompt=no;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -148,3 +148,6 @@ alias l='ls -lahX'
 export HISTTIMEFORMAT="%d/%m/%y %T "
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin:/sbin:/usr/sbin:/usr/local/sbin"
 export PATH="$GEM_HOME/bin:/usr/local/rvm/bin:$PATH"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
