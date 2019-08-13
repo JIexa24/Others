@@ -10,8 +10,12 @@ fi
 
 if [[ $1 == "apt" ]];
 then
-  apt update && apt install git gitk gcc iptables-persistent netfilter-persistent vim ntp sudo aptitude
+  apt update && apt install htop git gitk gcc iptables-persistent netfilter-persistent vim ntp sudo aptitude
 fi
+
+curl -sSL https://rvm.io/mpapis.asc | sudo gpg --import -
+curl -sSL https://rvm.io/pkuczynski.asc | sudo gpg --import -
+
 curl -sSL https://get.rvm.io | bash -s stable --ruby
 
 
