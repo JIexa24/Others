@@ -151,4 +151,4 @@ export PATH="$GEM_HOME/bin:/usr/local/rvm/bin:$PATH"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
-export $DENYOUT=">>/dev/null 2&>1"
+export DENYOUT=">> /dev/null &2>1"
