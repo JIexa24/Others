@@ -1,0 +1,7 @@
+# No annoying startup message
+startup_message off
+# Use bash
+shell /bin/bash
+#Term type
+term xterm-256color
+
