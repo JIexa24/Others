@@ -9,3 +9,12 @@ autodetach on
 startup_message off 
 hardstatus alwayslastline "%{+b wk} %c %D %d %M %Y %=[ %w ] "
 bind = layout save default
+
+split -v
+screen -t win1
+focus
+split
+screen -t win2
+focus
+screen -t win3
+focus
