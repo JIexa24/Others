@@ -8,4 +8,4 @@ altscreen on
 autodetach on
 startup_message off 
 hardstatus alwayslastline "%{+b wk} %c %D %d %M %Y %=[ %w ] "
-bind = layout save default
+bind + layout save default
