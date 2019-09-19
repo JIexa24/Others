@@ -7,8 +7,8 @@ term xterm-256color
 altscreen on
 autodetach on
 startup_message off 
-hardstatus alwayslastline "%{+b wk} %c %D %d %M %Y %=[ %w ] "
 bind + layout save default
+hardstatus alwayslastline "%{+b dk}[%{-b dg} %0C:%s%a %{=b dk}]-[%{-b dw}Load%{+b dk}:%{-b dg}%l %{+b dk}] %=[%w]"
 
 split -v
 screen -t win1
