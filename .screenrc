@@ -9,3 +9,4 @@ autodetach on
 startup_message off 
 bind + layout save default
 hardstatus alwayslastline "%{+b dk}[%{-b dg} %0C:%s%a %{=b dk}]-[%{-b dw}Load%{+b dk}:%{-b dg}%l %{+b dk}] %=[%w]"
+defscrollback 10000

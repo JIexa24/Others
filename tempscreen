@@ -1,15 +1,5 @@
 # No annoying startup message
-startup_message off
-# Use bash
-defshell -/bin/bash
-#Term type
-term xterm-256color
-altscreen on
-autodetach on
-startup_message off 
-bind + layout save default
-hardstatus alwayslastline "%{+b dk}[%{-b dg} %0C:%s%a %{=b dk}]-[%{-b dw}Load%{+b dk}:%{-b dg}%l %{+b dk}] %=[%w]"
-
+source ~/.screenrc
 split -v
 screen -t win1
 focus
