@@ -28,6 +28,8 @@ DEF="\033[1;00m"
     lastb | head -n 3
   fi
   printf "Last passwd: $(passwd -S $(whoami))\n"
+  printf "Last reboot: \n$(last reboot)\n"
+
   printf "Last dmesg errors (5) :\n"
   dmesg  | grep error | tail -n 5
 
