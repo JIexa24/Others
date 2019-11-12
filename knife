@@ -10,14 +10,16 @@ _knife()
   case $prev in
     knife)
       if [ ${#COMP_WORDS[@]} = 2 ]; then
-        COMPREPLY=($(echo -e "node cookbook role environment block search" | sed 's/ /\n/g' | grep -E "^$current"))
+        COMPREPLY=($(echo -e "vault node cookbook role environment block search" | sed 's/ /\n/g' | grep -E "^$current"))
       fi
       return 0
       ;;
-    node|role|cookbook|environment)
+    node|role|cookbook|environment|vault)
       if [ ${#COMP_WORDS[@]} = 3 ]; then
-        if [ "$command" = "cookbook" ]
+        if [ "$command" = "cookbook" ]; then
           COMPREPLY=($(echo -e "edit show list download" | sed 's/ /\n/g' | grep -E "^$current"))
+        elif [ "$command" = "vault" ]; then
+          COMPREPLY=($(echo -e "create update list edit delete show" | sed 's/ /\n/g' | grep -E "^$current"))
         else 
           COMPREPLY=($(echo -e "edit show list" | sed 's/ /\n/g' | grep -E "^$current"))
         fi

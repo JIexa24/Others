@@ -145,6 +145,8 @@ parse_git_branch() {
 }
 
 alias l='ls -lahX'
+alias sbash='source ~/.bashrc'
+
 export HISTTIMEFORMAT="%d/%m/%y %T "
 #export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin:/sbin:/usr/sbin:/usr/local/sbin"
 export PATH="$GEM_HOME/bin:/usr/local/rvm/bin:$PATH"
