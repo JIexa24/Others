@@ -23,8 +23,8 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=10000
+HISTFILESIZE=20000
 HISTFILE=~/.bash_history
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -153,4 +153,3 @@ export PATH="$GEM_HOME/bin:/usr/local/rvm/bin:$PATH"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
-
