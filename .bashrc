@@ -23,8 +23,8 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=10000
-HISTFILESIZE=20000
+HISTSIZE=100000000
+HISTFILESIZE=200000000
 HISTFILE=~/.bash_history
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -146,6 +146,7 @@ parse_git_branch() {
 
 alias l='ls -lahX'
 alias sbash='source ~/.bashrc'
+alias disp='export DISPLAY=:0'
 
 export HISTTIMEFORMAT="%d/%m/%y %T "
 #export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin:/sbin:/usr/sbin:/usr/local/sbin"
