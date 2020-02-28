@@ -1,0 +1,35 @@
+_kubectl()
+{
+  local current prev command
+  current=${COMP_WORDS[COMP_CWORD]}
+  prev=${COMP_WORDS[COMP_CWORD-1]}
+  pprev=${COMP_WORDS[COMP_CWORD-2]} 
+  command=${COMP_WORDS[1]}
+  subcommand=${COMP_WORDS[2]}
+
+  case $prev in
+    kubectl)
+      if [ ${#COMP_WORDS[@]} = 2 ]; then
+        COMPREPLY=($(echo -e "config exec get delete logs cluster-info" | sed 's/ /\n/g' | grep -E "^$current"))
+      fi
+      return 0
+      ;;
+    config|get|delete|exec|logs)
+      if [ ${#COMP_WORDS[@]} = 3 ]; then
+        if [ "$command" = "config" ]; then
+          COMPREPLY=($(echo -e "view use-context" | sed 's/ /\n/g' | grep -E "^$current"))
+        elif [ "$command" = "get" ]; then
+          COMPREPLY=($(echo -e "nodes pods replicasets" | sed 's/ /\n/g' | grep -E "^$current"))
+        elif [ "$command" = "delete" ]; then
+          COMPREPLY=($(echo -e "pod node" | sed 's/ /\n/g' | grep -E "^$current"))
+        elif [ "$command" = "exec" ]; then
+          COMPREPLY=($(echo -e "<containername>" | sed 's/ /\n/g' | grep -E "^$current"))
+        elif [ "$command" = "logs" ]; then
+          COMPREPLY=($(echo -e "<containername>" | sed 's/ /\n/g' | grep -E "^$current"))
+        fi
+      fi
+      return 0
+      ;;
+  esac
+}
+complete -F _kubectl kubectl	
